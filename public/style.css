@@ -3,20 +3,20 @@
   height: 50px;
 }
 
-.red-quote{
+/*.red-quote{
   color: red;
-}
-#asides {
+}*/
 
-}
-
-cite {
+#deleteButton, label, cite {
   margin-left: 8px;
 }
 
-#deleteButton {
-  margin-left: 8px;
-  
-  /*display: inline-block;*/
-  /*float: right;*/
+blockquote.blockquote-live {
+  /*max-width: 100px;*/
+}
+
+.cite-live {
+/*  display: inline-block;
+  position: relative;
+  left: 108px;*/
 }
