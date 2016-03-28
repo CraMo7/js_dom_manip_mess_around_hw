@@ -33,23 +33,29 @@ var domLoaded = function(){
     var deleteButtonsCollection = document.querySelectorAll("#deleteButton");
     var blockQuotesCollection = document.querySelectorAll("section#quotes blockquote");
     
-    var deleteQuote = function(index){
-      blockQuotesCollection[index].parentNode.removeChild(blockQuotesCollection[index]);
-    };
+    // var deleteQuote = function(index){
+    //   blockQuotesCollection[index].parentNode.removeChild(blockQuotesCollection[index]);
+    // };
 
     //adding event listeners to delete buttons
     //this invokes the function within the loop and so deletes the elements immediately
     //plan B, write a function to make each delete function
-    for (var i = 0; i < blockQuotesCollection.length; i++){
-      deleteButtonsCollection[i].onclick = deleteQuote(i);
-    }
+    // for (var i = 0; i < blockQuotesCollection.length; i++){
+    //   deleteButtonsCollection[i].onclick = deleteQuote(i);
+    // }
 
-
+    //this function returns a function with the appropriate and matching index, to the index of the delete button, hard coded into each returned function separately
     var makeDeleteQuoteFunction = function(index){
-      function deleteThisQuote(){
-        deleteButtonsCollection[index].onclick = 
-      }
+      var deleteThisQuote = function(){
+        blockQuotesCollection[index].parentNode.removeChild(blockQuotesCollection[index]);
+      }//.bind(this)
+      return deleteThisQuote;
     }
+    
+    for (var i = 0; i < blockQuotesCollection.length; i++){
+      deleteButtonsCollection[i].onclick = makeDeleteQuoteFunction(i);
+    }
+
 
 
   // console.log(deleteButtonsCollection);
