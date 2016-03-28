@@ -1,0 +1,22 @@
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.red-quote{
+  color: red;
+}
+#asides {
+
+}
+
+cite {
+  margin-left: 8px;
+}
+
+#deleteButton {
+  margin-left: 8px;
+  
+  /*display: inline-block;*/
+  /*float: right;*/
+}
