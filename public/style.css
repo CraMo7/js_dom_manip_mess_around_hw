@@ -20,3 +20,9 @@ blockquote.blockquote-live {
   position: relative;
   left: 108px;*/
 }
+
+html {
+  background-image: url(/whycantibepretty.jpg);
+  background-repeat: no-repeat;
+  color: #3a5061;
+}
